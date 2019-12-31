@@ -8,7 +8,7 @@ class TelLinkGenerator extends Component {
   }
 
   generateLink() {
-    return `${window.origin}/tel/${this.state.phonNumber}`
+    return `${window.origin}/tel/${encodeURIComponent(this.state.phonNumber)}`
   }
 
   linkResult = () => <p> Link: <a href={this.generateLink()} > {this.generateLink()} </a> </p>
@@ -19,7 +19,7 @@ class TelLinkGenerator extends Component {
         <form>
           <label>
             <p>Create Telephone Link</p>
-            <input type="tel" name="phoneNumber" onChange={this.handlePhoneNumberChange} />
+            <input type="tel" name="phoneNumber" onChange={this.handlePhoneNumberChange} value={this.state.phoneNumber}/>
           </label>
         </form>
         <br/>
