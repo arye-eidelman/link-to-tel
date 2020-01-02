@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 
 class TelLinkGenerator extends Component {
   state = { phonNumber: "" }
@@ -11,20 +12,33 @@ class TelLinkGenerator extends Component {
     return `${window.origin}/tel/${encodeURIComponent(this.state.phonNumber)}`
   }
 
-  linkResult = () => <p> Link: <a href={this.generateLink()} > {this.generateLink()} </a> </p>
+  linkResult = () => (
+    <p>
+      <a href={this.generateLink()} >
+        <Button outline color="success">
+          <i className="material-icons pr-2 align-bottom">phone </i>
+          {this.state.phonNumber}
+        </Button>
+      </a>
+    </p>
+  )
 
   render() {
     return (
-      <div>
-        <form>
-          <label>
-            <p>Create Telephone Link</p>
-            <input type="tel" name="phoneNumber" onChange={this.handlePhoneNumberChange} value={this.state.phoneNumber}/>
-          </label>
-        </form>
-        <br/>
+      <Container>
+        <h2>Generate a URL to call a phone number (using the tel: protocol)</h2>
+        <p>Great for places where you can only insert standard web links</p>
+
+        <Form onSubmit={e => e.preventDefault()}>
+          <FormGroup>
+            <Label for="phoneNumber">Phone number</Label>
+            <Input type="tel" name="phoneNumber" id="phoneNumber" placeholder="+1 800 555 0123"
+              onChange={this.handlePhoneNumberChange} value={this.state.phoneNumber} />
+          </FormGroup>
+        </Form>
+        <br />
         {!this.state.phonNumber || this.linkResult()}
-      </div>
+      </Container>
     )
   }
 }

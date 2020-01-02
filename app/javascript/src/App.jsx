@@ -1,16 +1,23 @@
 import React, { Component } from 'react'
+import { Route, Link, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
 import TelLinkGenerator from './TelLinkGenerator'
+import EmailLinkGenerator from './EmailLinkGenerator'
+import Header from './Header'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>Link To Tel</h1>
-        <h2>Generate a url that redirects to a phone number (tel: link)</h2>
-        <p>Great for places where you can only insert http(s): links and not tel: links</p>
+      <Router>
+        <>
+          <Header />
 
-        <TelLinkGenerator />
-      </div>
+          <Switch>
+            <Route exact path="/" component={TelLinkGenerator} />
+            <Route path="/tel/new" component={TelLinkGenerator} />
+            <Route path="/email/new" component={EmailLinkGenerator} />
+          </Switch>
+        </>
+      </Router>
     )
   }
 }
