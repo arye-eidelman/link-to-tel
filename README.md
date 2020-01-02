@@ -1,6 +1,8 @@
 # README
 
-An app for redirecting an http(s) web link to a phone number tel link for use in office documents and gui's where only web links are allowed.
+Generate a URL to call a phone number (using the tel: protocol) or send an email (using the mailto: protocol).
+
+This is a https URL that redirects so that it can be used in places that don't support the tel and mailto protocols but only the http/https protocols.
 
 * Ruby version: 2.5.7
 
