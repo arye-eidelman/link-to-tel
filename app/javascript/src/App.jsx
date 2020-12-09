@@ -19,8 +19,8 @@ class App extends Component {
             </p>
             
             <p>
-              <a className="alert-link" href="https://www.link-to-tel.com/">
-                www.link-to-tel.com
+              <a className="alert-link" href="https://www.linktotel.com/">
+                www.linktotel.com
               </a> {' '}
               links will stop working on November 30 2021 (in
               {' '}{
