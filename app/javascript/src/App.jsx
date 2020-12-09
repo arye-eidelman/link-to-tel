@@ -12,20 +12,20 @@ class App extends Component {
         <>
           <Alert color="warning">
             <p>
-              This site is moving to
+              This site is moving to {' '}
               <a className="alert-link" href="https://link-to-tel.herokuapp.com/">
                 link-to-tel.herokuapp.com
               </a>.
             </p>
             
             <p>
-              <a className="alert-link" qhref="https://www.link-to-tel.com/">
+              <a className="alert-link" href="https://www.link-to-tel.com/">
                 www.link-to-tel.com
-              </a>
+              </a> {' '}
               links will stop working on November 30 2021 (in
-              {
+              {' '}{
                 Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))
-              }
+              }{' '}
               days from now).
             </p>
           </Alert>
