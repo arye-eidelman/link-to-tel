@@ -27,7 +27,7 @@ class TelLinkGenerator extends Component {
     return (
       <>
         <h2>Generate a phone call link</h2>
-        <p className="text-muted">clicking this link will open your phones dialer with this number prefilled.</p>
+        <p className="text-muted">Clicking this link will open the dialer with this number prefilled.</p>
 
         <Form onSubmit={e => e.preventDefault()}>
           <FormGroup>
