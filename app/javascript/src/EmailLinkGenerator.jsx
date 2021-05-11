@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText, Container } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 
 class TelLinkGenerator extends Component {
   state = { emailAddress: "" }
@@ -25,9 +25,9 @@ class TelLinkGenerator extends Component {
 
   render() {
     return (
-      <Container>
-        <h2>Generate a URL to send an email (using the mailto: protocol).</h2>
-        <p>Great for places where you can only insert standard web links.</p>
+      <>
+        <h2>Generate an email link</h2>
+        <p className="text-muted">Clicking this link will open to your email app's new email page with this email as the recipient.</p>
 
         <Form onSubmit={e => e.preventDefault()}>
           <FormGroup>
@@ -38,7 +38,7 @@ class TelLinkGenerator extends Component {
         </Form>
         <br />
         {!this.state.emailAddress || this.linkResult()}
-      </Container>
+      </>
     )
   }
 }

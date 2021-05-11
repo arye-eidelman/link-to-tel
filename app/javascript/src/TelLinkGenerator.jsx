@@ -25,9 +25,9 @@ class TelLinkGenerator extends Component {
 
   render() {
     return (
-      <Container>
-        <h2>Generate a URL to call a phone number (using the tel: protocol)</h2>
-        <p>Great for places where you can only insert standard web links</p>
+      <>
+        <h2>Generate a phone call link</h2>
+        <p className="text-muted">clicking this link will open your phones dialer with this number prefilled.</p>
 
         <Form onSubmit={e => e.preventDefault()}>
           <FormGroup>
@@ -38,7 +38,7 @@ class TelLinkGenerator extends Component {
         </Form>
         <br />
         {!this.state.phonNumber || this.linkResult()}
-      </Container>
+      </>
     )
   }
 }
