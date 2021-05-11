@@ -22,7 +22,7 @@ class App extends Component {
                 <a className="alert-link" href="https://www.linktotel.com/">
                   www.linktotel.com
                 </a> {' '}
-                links will stop working on November 30 2021 (in
+                links will stop working on December 30 2021 (in
                 {' '}{
                   Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))
                 }{' '}
