@@ -27,7 +27,7 @@ class TelLinkGenerator extends Component {
     return (
       <>
         <h2>Generate an email link</h2>
-        <p className="text-muted">Clicking this link will open to your email app's new email page with this email as the recipient.</p>
+        <p className="text-muted">Clicking this link will start a new email to this address in your email app.</p>
 
         <Form onSubmit={e => e.preventDefault()}>
           <FormGroup>
