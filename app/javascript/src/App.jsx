@@ -23,9 +23,7 @@ class App extends Component {
                   www.linktotel.com
                 </a> {' '}
                 links will stop working on December 30 2021 (in
-                {' '}{
-                  Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))
-                }{' '}
+                {' '}{Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))}{' '}
                 days from now).
               </p>
             </Alert>
