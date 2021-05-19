@@ -3,19 +3,14 @@ updates:
 - package-ecosystem: bundler
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
     time: "10:00"
+    day: sunday
   open-pull-requests-limit: 10
-  allow:
-  - dependency-type: direct
-  - dependency-type: indirect
-  ignore:
-  - dependency-name: nokogiri
-    versions:
-    - 1.11.1
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
     time: "10:00"
+    day: sunday
   open-pull-requests-limit: 10
