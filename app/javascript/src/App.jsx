@@ -6,8 +6,8 @@ import EmailLinkGenerator from './EmailLinkGenerator'
 import Header from './Header'
 
 class App extends Component {
-  const daysRemaining = Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))
   render() {
+    const daysRemaining = Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))
     return (
       <Router>
           <Container fluid="md">
