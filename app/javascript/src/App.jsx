@@ -6,11 +6,12 @@ import EmailLinkGenerator from './EmailLinkGenerator'
 import Header from './Header'
 
 class App extends Component {
+  const daysRemaining = Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))
   render() {
     return (
       <Router>
           <Container fluid="md">
-            <Alert color="warning">
+            <Alert color="danger">
               <p>
                 This site is moving to {' '}
                 <a className="alert-link" href="https://link-to-tel.herokuapp.com/">
@@ -23,8 +24,8 @@ class App extends Component {
                   www.linktotel.com
                 </a> {' '}
                 links will stop working on December 30 2021 (in
-                {' '}{Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))}{' '}
-                days from now).
+                <b>{' '}{daysRemaining}{' '}
+                day{daysRemaining > 1 ? 's' : ''}</b> from now).
               </p>
             </Alert>
 
