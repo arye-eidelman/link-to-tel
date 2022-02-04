@@ -7,13 +7,12 @@ import Header from './Header'
 
 class App extends Component {
   render() {
-    const daysRemaining = Math.round((new Date(2021, 11, 30) - new Date()) / (24 * 60 * 60 * 1000))
     return (
       <Router>
           <Container fluid="md">
             <Alert color="danger">
               <p>
-                This site is moving to {' '}
+                This site moved to {' '}
                 <a className="alert-link" href="https://link-to-tel.herokuapp.com/">
                   link-to-tel.herokuapp.com
                 </a>.
@@ -23,9 +22,7 @@ class App extends Component {
                 <a className="alert-link" href="https://www.linktotel.com/">
                   www.linktotel.com
                 </a> {' '}
-                links will stop working on December 30 2021 (in
-                <b>{' '}{daysRemaining}{' '}
-                day{daysRemaining > 1 ? 's' : ''}</b> from now).
+                links stoped working on December 30 2021
               </p>
             </Alert>
 
