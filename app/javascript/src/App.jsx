@@ -7,22 +7,19 @@ import Header from './Header'
 
 class App extends Component {
   render() {
+    const daysRemaining = Math.round((new Date(2022, 11, 28) - new Date()) / (24 * 60 * 60 * 1000))
     return (
       <Router>
           <Container fluid="md">
             <Alert color="danger">
               <p>
-                This site moved to {' '}
-                <a className="alert-link" href="https://link-to-tel.herokuapp.com/">
-                  link-to-tel.herokuapp.com
-                </a>.
-              </p>
-            
-              <p>
-                <a className="alert-link" href="https://www.linktotel.com/">
-                  www.linktotel.com
-                </a> {' '}
-                links stoped working on December 30 2021
+                This site will be retired, and links will stop working on November 28, 2022
+                (in {' '}{daysRemaining}{' '} day{daysRemaining > 1 ? 's' : ''}),
+                when the
+                <a className="alert-link" href="https://blog.heroku.com/next-chapter">
+                  Heroku free tear is retired
+                </a>
+                .
               </p>
             </Alert>
 
